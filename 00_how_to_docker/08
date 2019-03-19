@@ -2,4 +2,8 @@
 # directly with the container via your terminal, and that the container deletes itself
 # once the shell’s execution is done.
 
-docker run -it alpine /bin/sh
+docker run -it --rm alpine /bin/sh
+
+# -i interactive mode
+# -t allocate a pseudo-tty
+# --rm 	automatically remove the container when it exits
