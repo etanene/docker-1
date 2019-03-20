@@ -3,5 +3,7 @@
 # to fix all four environment variables with one command, and you are not allowed
 # to use your shell’s builtin to set these variables by hand.
 
-docker-machine env Char
-eval $(docker-machine end Char)
+# to check env
+# docker-machine env Char
+
+eval $(docker-machine env Char)
