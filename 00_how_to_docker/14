@@ -8,6 +8,6 @@
 docker run \
 	--name lair \
 	-e WORDPRESS_DB_PASSWORD=Kerrigan \
-	-e WORDPRESS_DB_HOST=172.17.0.2:3306 \
+	-e WORDPRESS_DB_HOST=`docker inspect --format='{{.NetworkSettings.IPAddress}}' spawning-pool`:3306 \
 	-p 8080:80 \
 	-d wordpress
