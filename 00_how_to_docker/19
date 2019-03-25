@@ -10,12 +10,12 @@
 
 docker run \
 	--name Abathur \
-	--mount type=bind,source=/Users/afalmer-/flask,target=/root \
+	--mount type=bind,source=/Users/afalmer-/,target=/root \
 	-p 3000:3000 \
 	-dit python:2-slim
 
-docker exec -w /root Abathur pip install -r requirements.txt
+docker exec -w /root/flask Abathur pip install -r requirements.txt
 
-docker exec -w /root \
+docker exec -w /root/flask \
 	-e HOST_F=`docker inspect --format='{{.NetworkSettings.IPAddress}}' Abathur` \
-	Abathur flask run --host=$HOST_F --port=3000
+	-d Abathur flask run --host=$HOST_F --port=3000
