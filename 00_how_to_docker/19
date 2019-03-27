@@ -17,5 +17,5 @@ docker run \
 docker exec -w /root/flask Abathur pip install -r requirements.txt
 
 docker exec -w /root/flask \
-	-e HOST_F=`docker inspect --format='{{.NetworkSettings.IPAddress}}' Abathur` \
+	-e HOST_F=$(docker inspect --format='{{.NetworkSettings.IPAddress}}' Abathur) \
 	-d Abathur flask run --host=$HOST_F --port=3000
