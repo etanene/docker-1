@@ -1,0 +1,5 @@
+FROM	ruby
+
+EXPOSE	3000
+
+RUN		gem install rails
