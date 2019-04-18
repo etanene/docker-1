@@ -39,4 +39,4 @@ CMD		service ssh restart \
 
 # docker run -it -p 8080:80 -p 8443:443 -p 8222:22 --privileged gitlab
 # GIT_SSL_NO_VERIFY=true git clone https://192.168.99.100:8443/root/hello.git
-# git clone ssh://192.168.99.100:8222/root/hello.git
+# git clone ssh://git@192.168.99.100:8222/root/hello.git
